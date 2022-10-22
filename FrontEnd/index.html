@@ -31,73 +31,122 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap" rel="stylesheet">
     <!--CSS-->
     <link rel="stylesheet" href="css/style.css">
     <title>Principal</title>
 </head>
 
 <body>
-    <div class="row" style="height: 4vh;">
 
-    </div>
+    <div class="container">
 
+        <div class="row">
+            <div class="col-4">
 
-    <div class="row">
-        <div class="col-1">
-
-        </div>
-
-
-        <div class="conteudo col-10 pos-f-t container-fluid">
-
-            <div class="row">
-
-
-                <div class="col-2" style="text-align: center;">
-                    <img src="./imgs/cutlery.png" style="width:50px;">
-                </div>
-
-
-                <div class="col-8" style="text-align: center;">
-                    <input id="pesquisa" type="text" class="form-control pesquisa" style="width:100% ;"
-                        placeholder="PESQUISA">
-                </div>
-
-                <div class="col-2" style="text-align: center;">
-                    <button class="toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                </div>
+                <img src="./imgs/cutlery.png" width="20%" />
 
             </div>
-            <div class="row collapse" id="navbarToggleExternalContent">
+            <div class="col-4">
 
-              
-                <div class="lista-acoes col-5" style="text-align: start; position: relative;left: 60%;">
-                    <ul>
-                        <li><a href="#" class="acao"> HOME </a></li>
-                        <li><a href="#" class="acao"> RECEITAS SALGADAS </a></li>
-                        <li><a href="#" class="acao"> RECEITAS DOCES </a></li>
-                        <li><a href="#" class="acao"> PETISCOS </a></li>
+                <input type="text" class="form-control pesquisa-principal" placeholder="PESQUISA" />
+
+            </div>
+            <div class="col-4" style="text-align:end;">
+
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" d
+                    ata-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+
+                    <a class="nav-link navbar-toggle" data-bs-toggle="dropdown" href="#" role="button"
+                        aria-expanded="false" style="text-align:end ;">
+
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20%" viewBox="0 0 172 172"
+                            style=" fill:#000000;">
+                            <defs>
+                                <linearGradient x1="43.2365" y1="0.2365" x2="125.02608" y2="82.02608"
+                                    gradientUnits="userSpaceOnUse" id="color-1_Rdp3AydLFY2A_gr1">
+                                    <stop offset="0.237" stop-color="#842b74"></stop>
+                                    <stop offset="0.85" stop-color="#842b74"></stop>
+                                </linearGradient>
+                                <linearGradient x1="43.2365" y1="43.2365" x2="125.02608" y2="125.02608"
+                                    gradientUnits="userSpaceOnUse" id="color-2_Rdp3AydLFY2A_gr2">
+                                    <stop offset="0.237" stop-color="#842b74"></stop>
+                                    <stop offset="0.85" stop-color="#842b74"></stop>
+                                </linearGradient>
+                                <linearGradient x1="43.2365" y1="86.2365" x2="125.02608" y2="168.02608"
+                                    gradientUnits="userSpaceOnUse" id="color-3_Rdp3AydLFY2A_gr3">
+                                    <stop offset="0.237" stop-color="#842b74"></stop>
+                                    <stop offset="0.85" stop-color="#842b74"></stop>
+                                </linearGradient>
+                            </defs>
+                            <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                                stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                                font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                                style="mix-blend-mode: normal">
+                                <path d="M0,172v-172h172v172z" fill="none"></path>
+                                <g>
+                                    <path
+                                        d="M154.08333,53.75h-136.16667c-3.94167,0 -7.16667,-3.225 -7.16667,-7.16667v-7.16667c0,-3.94167 3.225,-7.16667 7.16667,-7.16667h136.16667c3.94167,0 7.16667,3.225 7.16667,7.16667v7.16667c0,3.94167 -3.225,7.16667 -7.16667,7.16667z"
+                                        fill="url(#color-1_Rdp3AydLFY2A_gr1)"></path>
+                                    <path
+                                        d="M154.08333,96.75h-136.16667c-3.94167,0 -7.16667,-3.225 -7.16667,-7.16667v-7.16667c0,-3.94167 3.225,-7.16667 7.16667,-7.16667h136.16667c3.94167,0 7.16667,3.225 7.16667,7.16667v7.16667c0,3.94167 -3.225,7.16667 -7.16667,7.16667z"
+                                        fill="url(#color-2_Rdp3AydLFY2A_gr2)"></path>
+                                    <path
+                                        d="M154.08333,139.75h-136.16667c-3.94167,0 -7.16667,-3.225 -7.16667,-7.16667v-7.16667c0,-3.94167 3.225,-7.16667 7.16667,-7.16667h136.16667c3.94167,0 7.16667,3.225 7.16667,7.16667v7.16667c0,3.94167 -3.225,7.16667 -7.16667,7.16667z"
+                                        fill="url(#color-3_Rdp3AydLFY2A_gr3)"></path>
+                                </g>
+                            </g>
+                        </svg>
+
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Receitas Doces</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">Receitas Salgadas</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">Petiscos</a></li>
+
+
                     </ul>
 
-                </div>
+            </div>
+        </div>
+
+
+        <div class="row" style="height:80vh; ">
+            <div class="col" style="text-align:center ;">
+                <img src="./imgs/ramo-folhas.png" class=" vertical-cente" width="50%"/>
+
+            </div>
+            <div class="col titulo-receitas">
+                <h1 class="receitas-da-moog">
+                    RECEITAS
+                    <BR>
+                    <BR>
+
+                    DA
+                    <BR>
+                    <BR>
+                    MOOG
+                </h1>
+            </div>
+            <div class="col" >
+                <img src="./imgs/ramo-folhas-2.png" class="" width="50%"/>
+
             </div>
 
 
-
-
-
         </div>
 
 
-
-        <div class="col-1">
-
-        </div>
-    </div>
 
 
 

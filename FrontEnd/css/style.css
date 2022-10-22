@@ -1,61 +1,48 @@
-body{
+body {
     padding: 0;
     margin: 0;
+    overflow-x: hidden;
+
     background-image: url("../imgs/fundo-cozinha.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
-    overflow-x: hidden;
+    padding-top: 5vh;
 }
 
-.conteudo{
-    background-color: rgba(248,248,255,0.85);
-    height: 90vh;
-    padding: 0;
-   
-}
-.botao{
-    justify-content: end;
-    background-color: #832C73;
+.container {
     
+    background-color: rgba(255,255,255, 0.8);
+    padding-top: 1%;
 }
 
-.item-menu{
-    text-decoration: none;
-    color: white;
+.dropdown-menu {
+    inset: 10px 0px auto -20px !important;
+    position: absolute !important;
 }
-
-.navbar{
-    background-color: transparent !important;
-}
-
-.pesquisa{
-    background-color: #B585AE;
-   
-}
-
-#pesquisa::-webkit-input-placeholder{
-    color:#fff;
-    text-transform: uppercase;
-    font-style: bold;
-    text-align: center;
+.pesquisa-principal{
+    background-color: #d798d1;
+    width: 100%;
     font-weight: bold;
-}
-
-.navbar-toggler{
-background-color: #832C73;
-}
-
-.lista-acoes{
-    background-color: #B585AE;
-}
-.acao{
-text-decoration: none;
-color: #fff;
-font-weight: bold;
-}
-
-::marker {
-    color: #832C73;
-    font-size:40px;
     
+}
+.dropdown-menu{
+background-color: #D9CBD8;
+border: none;
+}
+.titulo-receitas{
+    text-align: center;
+   padding-top:10vh;
+}
+.receitas-da-moog{
+    font-size:5vw;
+    font-family: 'Fuzzy Bubbles', cursive;
+    font-weight:600;
+    color:#842B74;
+}
+
+.vertical-cente{
+    margin: 0;
+    position: absolute;
+    top:40vh ;
+ 
 }
