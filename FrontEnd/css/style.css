@@ -1,5 +1,5 @@
-body{
-    padding: 0;
+body {
+    padding: 25px;
     margin: 0;
     background-image: url("../imgs/fundo-cozinha.jpeg");
     background-repeat: no-repeat;
@@ -7,55 +7,45 @@ body{
     overflow-x: hidden;
 }
 
-.conteudo{
-    background-color: rgba(248,248,255,0.85);
-    height: 90vh;
-    padding: 0;
-   
-}
-.botao{
-    justify-content: end;
-    background-color: #832C73;
-    
-}
-
-.item-menu{
-    text-decoration: none;
-    color: white;
-}
-
-.navbar{
-    background-color: transparent !important;
-}
-
-.pesquisa{
-    background-color: #B585AE;
-   
-}
-
-#pesquisa::-webkit-input-placeholder{
-    color:#fff;
-    text-transform: uppercase;
-    font-style: bold;
+.container-fluid {
+    display: flex;
+    flex-wrap: wrap;
     text-align: center;
-    font-weight: bold;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+
 }
 
-.navbar-toggler{
-background-color: #832C73;
+.nave {
+    align-items: center;
 }
 
-.lista-acoes{
-    background-color: #B585AE;
-}
-.acao{
-text-decoration: none;
-color: #fff;
-font-weight: bold;
+.banner-receitas {
+    height: 80vh;
+    text-align: center;
+    display: flex;
+
+
 }
 
-::marker {
-    color: #832C73;
-    font-size:40px;
-    
+.folha1 {
+    display: flex;
+    align-items: flex-end !important;
+    text-align: center;
+    justify-content:end;
+}
+
+.folha2 {
+    display: flex;
+    align-items: flex-start !important;
+    justify-content:flex-start;
+}
+
+.textoReceitas {
+    display: flex;
+    align-items: center !important;
+    flex-direction: column;
+    justify-content: center;
 }
