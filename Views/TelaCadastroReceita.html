@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--BOOTSTRAP-->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -33,56 +36,41 @@
     <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <!--CSS-->
-    <link rel="stylesheet" href="css/style.css">
-    <title>Principal</title>
+    <link rel="stylesheet" href="../FrontEnd/css/style.css">
+    <title>Cadastro</title>
 </head>
 
 <body>
+
     <div class="container-fluid">
-
-        <div class="row col-12  d-flex nave">
-            <div class="col-4 col-sm-3  col-md-4"><img src="./imgs/logo-moog-1.png" style="width:20%;" /></div>
-
-            <div class="col-4 col-sm-6  col-md-4"> <input type="text" class="form-control"
-                    placeholder="Pesquise aqui ..." style="width:100% ;" /></div>
-
-            <div class="col-4 col-sm-3  col-md-4">
-
-                <i class="bi bi-list" data-bs-toggle="dropdown" aria-expanded="false"
-                    style="color: black; font-size: 50px;"></i>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
+        <div class="nav">
+            <div class="col-12 col-md-4 col navItem">
+                <a href="#"><img src="../FrontEnd/imgs/cutlery.png" width="18%" /></a>
             </div>
 
+            <div class="col-12 col-md-4 navItem">
+                <a style="font-weight:bold; font-size:30px;"> CADASTRO DE RECEITAS </a>
+            </div>
+
+            <div class="col-12 col-md-4 navItem">
+                <div class="">
+                    <img src="../FrontEnd/imgs/list.svg" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false" type="button" id="dropdownMenuButton" class="botaoMenu" />
+
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">RECEITAS SALGADAS</a>
+                        <a class="dropdown-item" href="#">RECEITAS DOCES</a>
+                        <a class="dropdown-item" href="#">PETISCOS</a>
+                        <a class="dropdown-item">--------------------------------</a>
+                        <a class="dropdown-item" href="./index.html">INÍCIO</a>
+                    </div>
+                </div>
+            </div>
         </div>
 
 
-        <div class="row col-12 d-flex banner-receitas">
-            <div class="col-4 col-sm-4  col-md-4 folha1">
-                <h3>TESTE 1</h3>
-            </div>
-
-            <div class="col-4 col-sm-4  col-md-4 textoReceitas">
-                <h1>RECEITAS</h1><br>
-                <h1>DA</h1><br>
-                <h1>MOOG</h1>
-
-
-            </div>
-
-            <div class="col-4 col-sm-4  col-md-4 folha2">
-                <h3>TESTE 3</h3>
-            </div>
-
-
-        </div>
-
-
+        
     </div>
-
 
 </body>
 

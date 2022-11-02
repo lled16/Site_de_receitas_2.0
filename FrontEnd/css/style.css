@@ -1,53 +1,48 @@
 body {
-    margin: 0;
     overflow-x: hidden;
+    padding: 5vh;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    text-align: center;
 
-    background-image: url("../imgs/fundo-cozinha.jpeg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding-top: 5vh;
 }
 
 .container-fluid {
     display: flex;
-    flex-wrap: wrap;
-    text-align: center;
-    width: 100%;
-    margin: 0;
-    padding: 0;
     background-color: rgba(255, 255, 255, 0.8);
-
+    width: 100%;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
 }
-
-.nave {
+.nav{
+    display: flex;
+    justify-content:space-around;
+    width: 100%;
+    flex-wrap: wrap;
+    padding: 10px;
     align-items: center;
 }
-
-.banner-receitas {
-    height: 80vh;
-    text-align: center;
+.receitasDaMoog
+{
     display: flex;
-
-
+    justify-content:space-around;
+    width: 100%;
+    flex-wrap: wrap;
 }
-
-.folha1 {
-    display: flex;
-    align-items: flex-end !important;
-    text-align: center;
-    justify-content:end;
+.botaoMenu{
+    width: 10%;
+    background-color: #852775;
 }
-
-.folha2 {
-    display: flex;
-    align-items: flex-start !important;
-    justify-content:flex-start;
+.dropdown-menu{
+    background-color: rgba(181, 133, 175, 1);
+    color: white;
 }
-
-.textoReceitas {
-    display: flex;
-    align-items: center !important;
-    flex-direction: column;
-    justify-content: center;
-
+.dropdown-item{
+    color: white;
+    font-weight: bold;
+}
+.dropdown-item:hover{
+    background-color:  #852775;
 }
