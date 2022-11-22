@@ -1,0 +1,50 @@
+.header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.inputSearch {
+    height: 2.5em;
+    width: 50%;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(133, 39, 117, 0.3);
+    color: white;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+
+.imgMenu {
+
+    width: 25px;
+}
+
+.dropdwon {
+    background-color: #852775 !important;
+    text-decoration: none;
+    border: none;
+}
+
+.logoMoog {
+    width: 5vw;
+}
+
+.link {
+    text-decoration: none;
+    color: black;
+}
+
+.itemDrop {
+    background-color: rgba(133, 39, 117, 0.3);
+}
+
+.itemDrop :hover {
+    background-color: rgba(133, 39, 117, 0.6);
+    text-decoration: none;
+    color: white;
+}
