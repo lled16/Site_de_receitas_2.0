@@ -33,59 +33,51 @@
     <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <!--CSS-->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../FrontEnd/css/style.css">
     <title>Principal</title>
 </head>
 
 <body>
     <div class="container-fluid">
+        <div class="nav">
+            <div class="col-12 col-md-4 col navItem">
+                <a href="#"><img src="../FrontEnd/imgs/cutlery.png" width="18%" /></a>
+            </div>
+            <div class="col-12 col-md-4 navItem">
+                <input type="search" class="form-control" style="background-color:rgba(181, 133, 175, 0.5);" >
+            </div>
 
-        <div class="row col-12  d-flex nave">
-            <div class="col-2 col-sm-3  col-md-4"><img src="./imgs/cutlery.png" style="width:20%;" /></div>
+            <div class="col-12 col-md-4 navItem">
+                <div class="">
+                    <img src="../FrontEnd/imgs/list.svg" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                     type="button" id="dropdownMenuButton" class="botaoMenu" />
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <a class="dropdown-item" href="#">RECEITAS SALGADAS</a>
+                      <a class="dropdown-item" href="#">RECEITAS DOCES</a>
+                      <a class="dropdown-item" href="#">PETISCOS</a>
+                      <a class="dropdown-item" href="./TelaCadastroReceita.html">CADASTRAR RECEITA</a>
+                    </div>
+                  </div>
+            </div>
+        </div>
 
-            <div class="col-8 col-sm-6  col-md-4"> <input type="text" class="form-control pesquisa"
-                    placeholder="Pesquise aqui ..." /></div>
-
-            <div class="col-2 col-sm-3  col-md-4">
-
-                <i class="bi bi-list" data-bs-toggle="dropdown" aria-expanded="false"
-                    style="color: #862876; font-size: 50px;"></i>
-                <ul class="dropdown-menu nav-drop">
-                    <li><a class="dropdown-item" href="#">Receitas Doces</a></li>
-                    <li><a class="dropdown-item" href="#">Receitas Salgadas</a></li>
-                    <li><a class="dropdown-item" href="#">Petiscos</a></li>
-                    <li><a class="dropdown-item" href="#">Drinks</a></li>
-                </ul>
+        <div class="row">
+            <div class="col">
+                <img src="../FrontEnd/imgs/ramo-folhas.png" width="50%" style="padding-top: 70%;"/>
+            </div>
+            <div class="col" style="display:flex; align-items:center; flex-wrap:wrap; ">
+                <div class="col-12"><h1>RECEITAS</h1></div><br>                    
+                <div class="col-12"><h1>DA</h1></div><br>
+                <div class="col-12"><h1>MOOG</h1></div>
+            </div>
+            <div class="col">
+                <img src="../FrontEnd/imgs/ramo-folhas-2.png" width="50%"/>
             </div>
 
         </div>
-
-
-        <div class="row col-12 d-flex banner-receitas">
-
-
-            <div class="col-12 col-sm-12  col-md-3 folha1">
-             <img src='../FrontEnd/imgs/ramo-folhas.png' class="img1" />
-            </div>
-
-            <div class="col-12 col-sm-12  col-md-6 textoReceitas">
-                <h1>RECEITAS</h1><br>
-                <h1>DA</h1><br>
-                <h1>MOOG</h1>
-
-
-            </div>
-
-            <div class="col-12 col-sm-12  col-md-3 folha2">
-                
-            <img src='../FrontEnd/imgs/ramo-folhas-2.png' class="img2"/></div>
-           
-
-
-        </div>
-
 
     </div>
+
 
 
 </body>
