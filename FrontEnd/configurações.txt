@@ -1,6 +1,0 @@
-Cores principais: 
-
-Preto : #000000
-Laranja : #FF7200
-Branco : #FFF
-
