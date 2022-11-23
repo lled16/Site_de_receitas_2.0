@@ -26,7 +26,7 @@ export default function Header({ naoExibePesquisa }) {
             <CDropdown >
                 <CDropdownToggle className={styles.dropdwon}>    <ImMenu />    </CDropdownToggle>
                 <CDropdownMenu className={styles.itemDrop}>
-                    <CDropdownItem ><Link to="/home" className={styles.link}> Página Inicial</Link></CDropdownItem>
+                    <CDropdownItem ><Link to="/" className={styles.link}> Página Inicial</Link></CDropdownItem>
                     <CDropdownItem ><Link to="/cadastroreceitas" className={styles.link}> Cadastro de Receitas</Link></CDropdownItem>
                     <CDropdownItem ><Link to="/receitasdoces" className={styles.link}> Receitas doces</Link></CDropdownItem>
 

@@ -8,17 +8,17 @@ import Home from "./Components/Pages/Home";
 
 
 
+
 function App() {
   return (
     <div className="App">
 
 
-
+     
       <BrowserRouter>
-
         <Routes>
 
-          <Route path="home" index element={<Home />} />
+          <Route exact path="/" index element={<Home />} />
           <Route path="receitasdoces" element={<ReceitasDoces />} />
           <Route path="cadastroreceitas" element={<CadastroReceita />} />
         </Routes>

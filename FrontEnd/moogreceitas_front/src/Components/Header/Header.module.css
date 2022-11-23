@@ -40,11 +40,11 @@
 }
 
 .itemDrop {
-    background-color: rgba(133, 39, 117, 0.3);
+    background-color: rgba(133, 39, 117, 0.3) !important;
 }
 
 .itemDrop :hover {
-    background-color: rgba(133, 39, 117, 0.6);
+    background-color: rgba(133, 39, 117, 0.6) !important;
     text-decoration: none;
     color: white;
 }

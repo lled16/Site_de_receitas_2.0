@@ -1,18 +1,22 @@
 .form {
     width: 100%;
+    margin: 2em 0;
+    display: flex;
+    flex-direction: row;
+    
+
+   
+}
+
+.secao{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.botaoCadastrar{
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
-}
-
-.div {
-    display: flex;
-    justify-content: center;
-    padding-bottom: 20px;
-}
-
-.input {
-    border: none;
-    border-radius: 5px;
 }
