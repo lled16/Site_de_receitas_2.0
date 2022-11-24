@@ -5,7 +5,57 @@ import Select from '../form/Select'
 import Submit from '../form/SubmitButton'
 import TextArea from '../form/TextArea'
 
+import { useState } from 'react'
+
 export default function CadastroReceita() {
+ 
+
+    const [name, setName] = useState("");
+    const [porcoes, setPorcoes] = useState("");
+    const [tmpPreparo, settmpPreparo] = useState("");
+    const [categoria, setCategoria] = useState("");
+    const [ingredientes, setIngredientes] = useState("");
+    const [modoPreparo, setmodoPreparo] = useState("");
+    const [message, setMessage] = useState("");
+
+    let handleSubmit = async (e) => {
+        e.preventDefault();
+        try {
+          let res = await fetch("https://localhost:7136/CadastrandoReceita/", {
+            method: "POST",
+            headers: {
+                'Content-type': 'application/json',
+            },
+            body: JSON.stringify({
+              name: name,
+              porcoes: porcoes,
+              tmpPreparo: tmpPreparo,
+              categoria: categoria,
+              ingredientes: ingredientes,
+              modoPreparo:modoPreparo
+            }),
+          });
+          let resJson = await res.json();
+          if (res.status === 200) {
+            setName("");
+            setPorcoes("");
+            settmpPreparo("");
+            setCategoria("");
+            setIngredientes("");
+            setmodoPreparo("");
+
+            setMessage("Cadastrada !");
+          } else {
+            setMessage("Erro ao cadastrar !");
+          }
+        } catch (err) {
+          console.log(err);
+        }
+      };
+
+
+
+
 
     const options = [
         { name: "Salgada", key: 1, value: "Salgada" },
@@ -19,13 +69,15 @@ export default function CadastroReceita() {
             />
 
 
-            <form className={styles.form}>
+            <form  onSubmit={handleSubmit} className={styles.form}>
                 <div className={styles.secao}>
                     <Input
                         type="text"
                         text="Nome da receita"
                         name="name"
                         placeholder="Insira um nome para a receita"
+                        onChange={(e) => setName(e.target.value)}
+                      
 
                     />
                     <Input
@@ -33,6 +85,8 @@ export default function CadastroReceita() {
                         text="QTD. Porções"
                         name="name"
                         placeholder="Insira a quantidade de porções"
+                        onChange={(e) => setPorcoes(e.target.value)}
+                       
 
                     />
                     <Input
@@ -40,6 +94,8 @@ export default function CadastroReceita() {
                         text="Tempo de preparo"
                         name="name"
                         placeholder="Insira o tempo de preparo em minutos"
+                        onChange={(e) => settmpPreparo(e.target.value)}
+                       
 
                     />
 
@@ -48,6 +104,8 @@ export default function CadastroReceita() {
                         text="Selecione a categoria"
                         options={options}
                         value={options.value}
+                        onChange={(e) => setCategoria(e.target.value)}
+                       
 
                     />
 
@@ -61,6 +119,8 @@ export default function CadastroReceita() {
                         text="Ingredientes"
                         name="name"
                         placeholder="Insira os ingredientes"
+                        onChange={(e) => setIngredientes(e.target.value)}
+                     
 
                     />
                     <TextArea
@@ -69,16 +129,18 @@ export default function CadastroReceita() {
                         text="Modo de preparo"
                         name="name"
                         placeholder="Modo de preparo"
+                        onChange={(e) => setmodoPreparo(e.target.value)}
+                       
 
                     />
-
+                           <Submit text="Cadastrar Receita" />
                 </div>
+             
 
-
+         
             </form>
-            <div className={styles.botaoCadastrar}>
-                <Submit text="Cadastrar Receita" />
-            </div>
+            <div className="message">{message ? <p>{message}</p> : null}</div>
+
         </>
     )
 }

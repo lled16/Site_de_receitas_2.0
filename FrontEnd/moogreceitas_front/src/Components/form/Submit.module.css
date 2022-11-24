@@ -13,3 +13,8 @@
     background-color:rgb(190, 99, 175);
     color: black;
 }
+
+.button{
+   position: inherit;
+   left: 30%;
+}
