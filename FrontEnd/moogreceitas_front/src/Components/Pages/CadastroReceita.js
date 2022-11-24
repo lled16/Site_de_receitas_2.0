@@ -18,6 +18,8 @@ export default function CadastroReceita() {
     const [modoPreparo, setmodoPreparo] = useState("");
     const [message, setMessage] = useState("");
 
+    // setName("teste");
+
     let handleSubmit = async (e) => {
         e.preventDefault();
         try {
@@ -37,12 +39,7 @@ export default function CadastroReceita() {
           });
           let resJson = await res.json();
           if (res.status === 200) {
-            setName("");
-            setPorcoes("");
-            settmpPreparo("");
-            setCategoria("");
-            setIngredientes("");
-            setmodoPreparo("");
+           
 
             setMessage("Cadastrada !");
           } else {
@@ -54,6 +51,8 @@ export default function CadastroReceita() {
       };
 
 
+
+      console.log('teste',name)
 
 
 
@@ -103,7 +102,7 @@ export default function CadastroReceita() {
                         name="category_id"
                         text="Selecione a categoria"
                         options={options}
-                        value={options.value}
+                        // value={options.value}
                         onChange={(e) => setCategoria(e.target.value)}
                        
 
