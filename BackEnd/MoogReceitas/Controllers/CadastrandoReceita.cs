@@ -9,7 +9,7 @@ namespace MoogReceitas.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    [EnableCors(origins: "*", headers: "*", methods: "*")]
+    //[EnableCors(origins: "*", headers: "*", methods: "*")]
     public class CadastrandoReceita
     {   
 
@@ -34,6 +34,7 @@ namespace MoogReceitas.Controllers
 
             cadReceita.receitas.Add(receita);
             cadReceita.SaveChanges();
+
             return "Receita cadastrada !";
         }
     }
