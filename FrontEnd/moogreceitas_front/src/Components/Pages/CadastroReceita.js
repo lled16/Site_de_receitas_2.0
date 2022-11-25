@@ -1,14 +1,10 @@
 import Header from '../Header/Header'
 import styles from './CadastroReceita.module.css'
-import Input from '../form/Input'
-import Select from '../form/Select'
 import Submit from '../form/SubmitButton'
-import TextArea from '../form/TextArea'
-
 import { useState } from 'react'
 
 export default function CadastroReceita() {
- 
+
 
     const [name, setName] = useState("");
     const [porcoes, setPorcoes] = useState("");
@@ -18,49 +14,41 @@ export default function CadastroReceita() {
     const [modoPreparo, setmodoPreparo] = useState("");
     const [message, setMessage] = useState("");
 
-    // setName("teste");
 
     let handleSubmit = async (e) => {
         e.preventDefault();
         try {
-          let res = await fetch("https://localhost:7136/CadastrandoReceita/", {
-            method: "POST",
-            headers: {
-                'Content-type': 'application/json',
-            },
-            body: JSON.stringify({
-              name: name,
-              porcoes: porcoes,
-              tmpPreparo: tmpPreparo,
-              categoria: categoria,
-              ingredientes: ingredientes,
-              modoPreparo:modoPreparo
-            }),
-          });
-          let resJson = await res.json();
-          if (res.status === 200) {
-           
+            let res = await fetch("https://localhost:7136/CadastrandoReceita?name=" + name + "&porcoes=" + porcoes + "&tmpPreparo=" 
+            + tmpPreparo + "&categoria=" + categoria + "&ingredientes=" + ingredientes + "&modoPreparo=" + modoPreparo , {
+                method: "POST",
+                headers: {
+                    'Content-type': 'application/json',
+                }
+                // body: JSON.stringify({
+                //     name: name,
+                //     porcoes: porcoes,
+                //     tmpPreparo: tmpPreparo,
+                //     categoria: categoria,
+                //     ingredientes: ingredientes,
+                //     modoPreparo: modoPreparo
+                // }),
+            });
+            
+            if (res.status === 200 ) {
 
-            setMessage("Cadastrada !");
-          } else {
-            setMessage("Erro ao cadastrar !");
-          }
+
+                setMessage("Cadastrada !");
+            } else {
+                setMessage("Erro ao cadastrar !");
+            }
         } catch (err) {
-          console.log(err);
+            console.log(err);
         }
-      };
+    };
 
 
 
-      console.log('teste',name)
 
-
-
-    const options = [
-        { name: "Salgada", key: 1, value: "Salgada" },
-        { name: "Doce", key: 2, value: "Doce" },
-        { name: "Sobremesa", key: 3, value: "Sobremesa" }
-    ]
     return (
         <>
             <Header
@@ -68,75 +56,90 @@ export default function CadastroReceita() {
             />
 
 
-            <form  onSubmit={handleSubmit} className={styles.form}>
+            <form onSubmit={handleSubmit} className={styles.form}>
+
                 <div className={styles.secao}>
-                    <Input
+                    {/* <Input
                         type="text"
                         text="Nome da receita"
                         name="name"
-                        placeholder="Insira um nome para a receita"
+                        placeholder="Digite o nome da receita"
                         onChange={(e) => setName(e.target.value)}
-                      
+                    /> */}
 
+
+                    <label>Nome da receita</label>
+                    <input
+                        className={styles.input}
+                        type="text"
+                        value={name}
+                        placeholder="Digite o nome da receita"
+                        onChange={(e) => setName(e.target.value)}
                     />
-                    <Input
+                    <label>Qtd. Porções</label>
+                    <input
+                        className={styles.input}
                         type="number"
-                        text="QTD. Porções"
-                        name="name"
+                        value={porcoes}
                         placeholder="Insira a quantidade de porções"
                         onChange={(e) => setPorcoes(e.target.value)}
-                       
+
 
                     />
-                    <Input
+                    <label>Tempo de preparo</label>
+                    <input
+                        className={styles.input}
                         type="number"
-                        text="Tempo de preparo"
-                        name="name"
+                        value={tmpPreparo}
                         placeholder="Insira o tempo de preparo em minutos"
                         onChange={(e) => settmpPreparo(e.target.value)}
-                       
+
 
                     />
-
-                    <Select
-                        name="category_id"
-                        text="Selecione a categoria"
-                        options={options}
-                        // value={options.value}
+                    <label>Categoria</label>
+                    <select name="categoria"
+                        value={categoria}
+                        className={styles.input}
                         onChange={(e) => setCategoria(e.target.value)}
-                       
-
-                    />
+                    >
+                        <option value="1">Selecione uma categoria</option>
+                        <option value="2">Salgada</option>
+                        <option value="3">Doce</option>
+                        <option value="4">Sobremesa</option>
+                        <option value="5">Drinks</option>
+                    </select>
 
 
                 </div>
 
                 <div className={styles.secao}>
-                    <TextArea
+                    <label>Ingredientes</label>
+                    <textarea
                         className={styles.textarea}
                         type="textarea"
-                        text="Ingredientes"
-                        name="name"
+                        value={ingredientes}
+                        rows={5}
                         placeholder="Insira os ingredientes"
                         onChange={(e) => setIngredientes(e.target.value)}
-                     
+
 
                     />
-                    <TextArea
-
+                    <label>Modo de preparo</label>
+                    <textarea
+                        className={styles.textarea}
                         type='textarea'
-                        text="Modo de preparo"
-                        name="name"
+                        value={modoPreparo}
                         placeholder="Modo de preparo"
+                        rows={5}
                         onChange={(e) => setmodoPreparo(e.target.value)}
-                       
+
 
                     />
-                           <Submit text="Cadastrar Receita" />
+                    <Submit text="Cadastrar Receita" />
                 </div>
-             
 
-         
+
+
             </form>
             <div className="message">{message ? <p>{message}</p> : null}</div>
 

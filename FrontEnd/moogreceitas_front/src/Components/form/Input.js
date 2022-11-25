@@ -11,8 +11,8 @@ function Input({type, text, name, placeholder, handleOnChange, value}){
             type={type} 
             name={name} 
             placeholder={placeholder} 
-            id={name} 
-            onChange={handleOnChange} 
+            // id={name} 
+            
             value={value}
             />
            
