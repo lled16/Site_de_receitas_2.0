@@ -20,3 +20,50 @@
     align-items: center;
     justify-content: center;
 }
+
+.input{
+    width: 100%;
+}
+
+.form label{
+    margin-bottom:  .6em;
+    font-weight: bold;
+}
+
+.form input{
+    padding: .7em;
+    border-radius: 0;
+    border: none;
+}
+
+.form input::placeholder{
+    color: #7b7b7b;
+}
+
+
+
+.textarea{
+    width: 80%;
+    resize: none;
+}
+
+
+.form textarea{
+    padding: .7em;
+    border-radius: 0;
+    border: none;
+}
+
+.form textarea::placeholder{
+    color: #7b7b7b;
+}
+
+.form select{
+    padding: .7em;
+    border-radius: 0;
+    border: none;
+}
+
+.form select::placeholder{
+    color: #7b7b7b;
+}
