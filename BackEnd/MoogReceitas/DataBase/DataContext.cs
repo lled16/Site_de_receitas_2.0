@@ -5,8 +5,8 @@ namespace MoogReceitas.DataBase
 {
     public class DataContext : DbContext
     {
-        public virtual DbSet<CadastroReceita> receita { get; set; }
-        public virtual DbSet<Login> login { get; set; }
+        public virtual DbSet<CadastroReceita> receitas { get; set; }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
 
