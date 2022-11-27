@@ -36,7 +36,6 @@ export default function CadastroReceita() {
             
             if (res.status === 200 ) {
 
-
                 setMessage("Cadastrada !");
             } else {
                 setMessage("Erro ao cadastrar !");

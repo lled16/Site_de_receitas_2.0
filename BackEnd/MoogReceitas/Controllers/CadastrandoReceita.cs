@@ -23,13 +23,14 @@ namespace MoogReceitas.Controllers
 
             var receita = new CadastroReceita()
             {
-                Id = randNum.Next(),
-                Titulo = name,
-                Categoria = categoria,
-                TempoPreparo = tmpPreparo,
-                Rendimento = porcoes,
-                Ingredientes = ingredientes,
-                ModoPreparo = modoPreparo
+                ID = randNum.Next(),
+                NOME = name,
+                PORCOES = porcoes,
+                TMP_PREPARO = tmpPreparo,
+                CATEGORIA = categoria,
+                INGREDIENTES = ingredientes,
+                MODO_PREPARO = modoPreparo,
+                IMG = ""
             };
 
             cadReceita.receitas.Add(receita);

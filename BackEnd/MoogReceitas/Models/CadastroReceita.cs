@@ -2,14 +2,14 @@
 {
     public class CadastroReceita
     {
-        public int Id { get; set; }
-        public string Titulo { get; set; }
-        public string Categoria { get; set; }
-        public int TempoPreparo { get; set; }
-        public int Rendimento { get; set; }
-        public string Ingredientes { get; set; }
-        public string ModoPreparo { get; set; }
-        //public string Img { get; set; }
+        public int ID { get; set; }
+        public string NOME { get; set; }
+        public string CATEGORIA { get; set; }
+        public int TMP_PREPARO { get; set; }
+        public int PORCOES { get; set; }
+        public string INGREDIENTES { get; set; }
+        public string MODO_PREPARO{ get; set; }
+        public string IMG { get; set; }
 
     }
 }
