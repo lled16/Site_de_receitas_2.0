@@ -20,7 +20,7 @@ export default function Home() {
     useEffect(() => {
         setTimeout(
             () => {
-                fetch('https://localhost:7136/CadastrandoReceita', {
+                fetch('https://localhost:7136/CadastrandoReceita/getReceitasTotal?codCategoria=' + 0 , {
                     method: 'GET',
                     headers: {
                         'Content-type': 'application/json'

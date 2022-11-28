@@ -13,7 +13,7 @@ namespace MoogReceitas.Controllers
     public class CadastrandoReceita
     {
 
-        [HttpPost]
+        [HttpPost("cadastraReceita")]
         public string CadReceita(string name, int porcoes, int tmpPreparo, int categoria, string ingredientes, string modoPreparo)
         {
 
@@ -39,8 +39,8 @@ namespace MoogReceitas.Controllers
             return "Receita cadastrada !";
         }
 
-        [HttpGet]
-        public List<Receita> RetornaCandidatos()
+        [HttpGet("getReceitasTotal")]
+        public List<Receita> RetornaReceitas(int codCategoria)
         {
             DataContext context = new();
 
@@ -50,7 +50,18 @@ namespace MoogReceitas.Controllers
             {
                 foreach (var c in context.receitas)
                 {
-                    receitasCadastradas.Add(c);
+
+                    if (codCategoria != 0)
+                    {
+                        if (c.CATEGORIA == codCategoria)
+                        {
+                            receitasCadastradas.Add(c);
+                        }
+                    }
+                    else
+                    {
+                        receitasCadastradas.Add(c);
+                    }
                 }
                 return receitasCadastradas;
             }
@@ -60,6 +71,7 @@ namespace MoogReceitas.Controllers
             }
 
         }
+
 
     }
 }

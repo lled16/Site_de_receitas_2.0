@@ -1,5 +1,7 @@
 
 import styles from './cards.module.css'
+import {MdOutlineTimer} from 'react-icons/md'
+import {BiDish} from 'react-icons/bi'
 // import { BsPencilSquare, BsFillTrashFill } from 'react-icons'
 // import { BsFillPencilFill, BsTrashFill } from "react-icons/bs";
 
@@ -15,11 +17,11 @@ function Cards({ id, name, PORCOES, TMP_PREPARO }) {
                     <h4>{name}</h4>
                 </div>
                 <div className={styles.linha}>
-                    <p className={styles.boldTitulo}>Tempo de Preparo: </p>
-                    <p>{TMP_PREPARO} Minutos</p>
+                    <p><MdOutlineTimer className={styles.timer}/> </p>
+                    <p> {TMP_PREPARO} Minutos</p>
                 </div>
                 <div className={styles.linha}>
-                    <p className={styles.boldTitulo}>Rendimento:</p>
+                    <p className={styles.boldTitulo}><BiDish className={styles.timer}/></p>
                     <p>{PORCOES} Porções</p>
                 </div>
 

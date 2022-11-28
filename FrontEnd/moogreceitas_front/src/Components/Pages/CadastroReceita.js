@@ -18,7 +18,7 @@ export default function CadastroReceita() {
     let handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            let res = await fetch("https://localhost:7136/CadastrandoReceita?name=" + name + "&porcoes=" + porcoes + "&tmpPreparo=" 
+            let res = await fetch("https://localhost:7136/CadastrandoReceita/cadastraReceita?name=" + name + "&porcoes=" + porcoes + "&tmpPreparo=" 
             + tmpPreparo + "&categoria=" + categoria + "&ingredientes=" + ingredientes + "&modoPreparo=" + modoPreparo , {
                 method: "POST",
                 headers: {
@@ -104,8 +104,7 @@ export default function CadastroReceita() {
                         <option value="1">Selecione uma categoria</option>
                         <option value="2">Salgada</option>
                         <option value="3">Doce</option>
-                        <option value="4">Sobremesa</option>
-                        <option value="5">Drinks</option>
+                        <option value="4">Drinks</option>
                     </select>
 
 

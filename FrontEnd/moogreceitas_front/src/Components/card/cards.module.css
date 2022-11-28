@@ -1,61 +1,76 @@
-.card{
+.card {
     display: flex;
     align-items: center;
-    border: 2px solid black;
+    border: 2px solid rgba(133, 39, 117, 0.3);
     width: 100%;
     flex-direction: column;
-   
-   
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 0px 15px -8px #4F1746; 
+box-shadow: 0px 0px 15px -8px #4F1746;
+
+
 }
 
-.cards{
+.cards {
     width: 100%;
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
     flex-wrap: wrap;
-    
 
-  
+
+
 }
 
-.titulo h1{
+.titulo h1 {
     display: flex;
     align-items: center;
     width: 100%;
     justify-content: center;
     padding-top: 1em;
     padding-bottom: 1em;
+    font-family: 'Fuzzy Bubbles', cursive;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Solway', serif;
+
 }
 
-.linha{
+.linha {
     width: 100%;
     display: flex;
     justify-content: center;
 }
 
-.boldTitulo{
-    font-weight: bold;
-}
 
-.space{
+
+.space {
     padding: 5px;
     width: 30%;
 }
 
-.buttonPag{
+.buttonPag {
     border-radius: 25px;
     background-color: rgba(133, 39, 117, 0.6) !important;
     border: none;
+    font-weight: bold;
     color: white;
 }
 
-.divPag{
+.divPag {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
 }
-.button{
+
+.button {
     padding: 5px;
+
+}
+
+
+.timer{
+    font-size: 25px;
+    font-weight: bold;
+    
 }
