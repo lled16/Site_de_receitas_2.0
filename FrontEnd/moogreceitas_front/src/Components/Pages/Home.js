@@ -6,7 +6,16 @@ import styles from '../card/cards.module.css'
 export default function Home() {
 
 
-    const [receitas, setReceitas] = useState([])
+
+    const [itensPerPage, setItensPerPage] = useState(9);
+    const [currentPage, setCurrentPage] = useState(0);
+    const [receitas, setReceitas] = useState([]);
+    const pages = Math.ceil(receitas.length / itensPerPage);
+    const startIndex = currentPage * itensPerPage;
+    const endIndex = startIndex + itensPerPage;
+    const currentItens = receitas.slice(startIndex, endIndex);
+
+
 
     useEffect(() => {
         setTimeout(
@@ -37,13 +46,20 @@ export default function Home() {
             <Header
                 naoExibePesquisa={false}
             />
+
+
+
             <div className={styles.titulo}>
                 <h1> Receitas da MOOG </h1>
             </div>
+
+
+
+
             <div className={styles.cards}>
 
                 {receitas.length > 0 &&
-                    receitas.map((receita) => (
+                    currentItens.map((receita) => (
                         <Cards
 
                             name={receita.nome}
@@ -52,6 +68,13 @@ export default function Home() {
 
                         />
                     ))}
+            </div>
+
+            <div  className={styles.divPag} >
+
+                {Array.from(Array(pages), (item, index) => {
+                    return <div  className={styles.button} ><button value={index} className={styles.buttonPag} onClick={(e) => setCurrentPage(Number(e.target.value))}>{index + 1}</button></div>
+                })}
             </div>
         </>
     )

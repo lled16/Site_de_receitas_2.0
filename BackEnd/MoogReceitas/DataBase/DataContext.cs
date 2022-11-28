@@ -10,8 +10,14 @@ namespace MoogReceitas.DataBase
         public virtual DbSet<Receita> receitas { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.UseSqlServer("server=DESKTOP-278IVMV;database=MOOG_RECEITAS;trusted_connection=true;Integrated Security=SSPI;TrustServerCertificate=True;");
+        {   
+            
+            // CONEXÃO NA CAPYS
+            optionsBuilder.UseSqlServer("server=DEV45;database=MOOG_RECEITAS;trusted_connection=true;Integrated Security=SSPI;TrustServerCertificate=True;");
+
+
+            //CONEXÃO DA MINHA CASA
+            //optionsBuilder.UseSqlServer("server=DESKTOP-278IVMV;database=MOOG_RECEITAS;trusted_connection=true;Integrated Security=SSPI;TrustServerCertificate=True;");
 
 
         }
