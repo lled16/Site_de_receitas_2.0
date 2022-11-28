@@ -26,10 +26,11 @@ export default function Header({ naoExibePesquisa }) {
             <CDropdown >
                 <CDropdownToggle className={styles.dropdwon}>    <ImMenu />    </CDropdownToggle>
                 <CDropdownMenu className={styles.itemDrop}>
-                    <CDropdownItem ><Link to="/" className={styles.link}> Página Inicial</Link></CDropdownItem>
-                    <CDropdownItem ><Link to="/cadastroreceitas" className={styles.link}> Cadastro de Receitas</Link></CDropdownItem>
+                    <Link to="/" className={styles.link}> <CDropdownItem >Início</CDropdownItem></Link>
+                    <Link to="/home" className={styles.link}><CDropdownItem > Receitas</CDropdownItem></Link>
+                    <Link to="/cadastroreceitas" className={styles.link}> <CDropdownItem > Cadastro de Receitas</CDropdownItem></Link>
                     <div class="dropdown-divider"> </div>
-                    <CDropdownItem ><Link to="/receitasdoces" className={styles.link}> Receitas doces</Link></CDropdownItem>
+                    <Link to="/receitasdoces" className={styles.link}><CDropdownItem > Receitas doces</CDropdownItem></Link>
 
                 </CDropdownMenu>
             </CDropdown>

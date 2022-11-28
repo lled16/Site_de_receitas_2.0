@@ -11,13 +11,13 @@ namespace MoogReceitas.Controllers
     [Route("[controller]")]
     //[EnableCors(origins: "*", headers: "*", methods: "*")]
     public class CadastrandoReceita
-    {   
+    {
 
         [HttpPost]
-        public string CadReceita(string name, int porcoes, int tmpPreparo, string categoria, string ingredientes, string modoPreparo)
+        public string CadReceita(string name, int porcoes, int tmpPreparo, int categoria, string ingredientes, string modoPreparo)
         {
 
-            DataContext cadReceita = new DataContext();
+            DataContext cadReceita = new();
             Random randNum = new Random();
 
 
@@ -33,10 +33,35 @@ namespace MoogReceitas.Controllers
                 IMG = ""
             };
 
-            cadReceita.receitas.Add(receita);
+            cadReceita.Receitas.Add(receita);
             cadReceita.SaveChanges();
 
             return "Receita cadastrada !";
         }
+
+        [HttpGet]
+        public List<Receita> RetornaCandidatos()
+        {
+            DataContext context = new();
+
+            List<Receita> receitasCadastradas = new List<Receita>();
+
+            try
+            {
+                foreach (var c in context.receitas)
+                {
+                    receitasCadastradas.Add(c);
+                }
+                return receitasCadastradas;
+            }
+            catch
+            {
+                return null;
+            }
+
+        }
+
     }
 }
+
+
