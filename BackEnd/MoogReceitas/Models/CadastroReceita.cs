@@ -9,7 +9,7 @@
         public int CATEGORIA { get; set; }
         public string INGREDIENTES { get; set; }
         public string MODO_PREPARO{ get; set; }
-        public string IMG { get; set; }
+        public object IMG { get; set; }
 
     }
 }

@@ -14,7 +14,7 @@ namespace MoogReceitas.Controllers
     {
 
         [HttpPost("cadastraReceita")]
-        public string CadReceita(string name, int porcoes, int tmpPreparo, int categoria, string ingredientes, string modoPreparo)
+        public string CadReceita(string name, int porcoes, int tmpPreparo, int categoria, string ingredientes, string modoPreparo, object img)
         {
 
             DataContext cadReceita = new();
@@ -30,7 +30,7 @@ namespace MoogReceitas.Controllers
                 CATEGORIA = categoria,
                 INGREDIENTES = ingredientes,
                 MODO_PREPARO = modoPreparo,
-                IMG = ""
+                IMG = img
             };
 
             cadReceita.Receitas.Add(receita);

@@ -48,3 +48,15 @@
     text-decoration: none;
     color: white;
 }
+h1{
+    font-family: 'Fuzzy Bubbles', cursive;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Solway', serif;
+    text-align: justify;
+}
+.tituloPagina{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+}

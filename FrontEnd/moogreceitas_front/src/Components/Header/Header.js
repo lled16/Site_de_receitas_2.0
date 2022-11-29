@@ -19,7 +19,7 @@ export default function Header({ naoExibePesquisa }) {
             {!naoExibePesquisa ?
                 <input type="text" className={styles.inputSearch} placeholder='Pesquise aqui ...' />
                 :
-                <h1>Cadastro de Receitas</h1>
+                <div className={styles.tituloPagina}><h1 >Cadastro de Receitas</h1></div>
             }
 
 

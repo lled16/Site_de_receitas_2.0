@@ -10,6 +10,7 @@ export default function CadastroReceita() {
     const [porcoes, setPorcoes] = useState("");
     const [tmpPreparo, settmpPreparo] = useState("");
     const [categoria, setCategoria] = useState("");
+    // const [img, setImg] = useState("");
     const [ingredientes, setIngredientes] = useState("");
     const [modoPreparo, setmodoPreparo] = useState("");
     const [message, setMessage] = useState("");
@@ -18,8 +19,8 @@ export default function CadastroReceita() {
     let handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            let res = await fetch("https://localhost:7136/CadastrandoReceita/cadastraReceita?name=" + name + "&porcoes=" + porcoes + "&tmpPreparo=" 
-            + tmpPreparo + "&categoria=" + categoria + "&ingredientes=" + ingredientes + "&modoPreparo=" + modoPreparo , {
+            let res = await fetch("https://localhost:7136/CadastrandoReceita/cadastraReceita?name=" + name + "&porcoes=" + porcoes + "&tmpPreparo="
+                + tmpPreparo + "&categoria=" + categoria + "&ingredientes=" + ingredientes + "&modoPreparo=" , {
                 method: "POST",
                 headers: {
                     'Content-type': 'application/json',
@@ -33,8 +34,8 @@ export default function CadastroReceita() {
                 //     modoPreparo: modoPreparo
                 // }),
             });
-            
-            if (res.status === 200 ) {
+
+            if (res.status === 200) {
 
                 setMessage("Cadastrada !");
             } else {
@@ -95,6 +96,9 @@ export default function CadastroReceita() {
 
 
                     />
+
+
+        
                     <label>Categoria</label>
                     <select name="categoria"
                         value={categoria}
@@ -106,6 +110,17 @@ export default function CadastroReceita() {
                         <option value="3">Doce</option>
                         <option value="4">Drinks</option>
                     </select>
+                    {/* <label>Imagem</label>
+                    <input
+                        class="form-control"
+                        className={styles.img}
+                        type="file"
+                        value={img}
+                        placeholder="Imagem"
+                        onChange={(e) => setImg(e.target.files[0].item)}
+
+
+                    /> */}
 
 
                 </div>
@@ -133,11 +148,11 @@ export default function CadastroReceita() {
 
 
                     />
+
+                </div>
+                <div className={styles.submit}>
                     <Submit text="Cadastrar Receita" />
                 </div>
-
-
-
             </form>
             <div className="message">{message ? <p>{message}</p> : null}</div>
 
