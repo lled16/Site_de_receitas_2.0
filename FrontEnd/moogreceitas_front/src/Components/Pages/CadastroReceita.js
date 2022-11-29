@@ -10,17 +10,55 @@ export default function CadastroReceita() {
     const [porcoes, setPorcoes] = useState("");
     const [tmpPreparo, settmpPreparo] = useState("");
     const [categoria, setCategoria] = useState("");
-    // const [img, setImg] = useState("");
+    const [img, setImg] = useState("");
     const [ingredientes, setIngredientes] = useState("");
     const [modoPreparo, setmodoPreparo] = useState("");
     const [message, setMessage] = useState("");
 
 
+ 
+
+
+
+    const uploadImage =  async (e) => {
+        const file = img[0]
+        const base64 = await convertToBase64(file)
+        setImg(base64)
+    };
+
+    const convertToBase64 = (file) => {
+        return new Promise((resolve, reject)=>{
+            const fileReader = new FileReader();
+            fileReader.readAsDataURL(file)
+
+
+            fileReader.onload = () =>{
+                resolve(fileReader.result);
+                
+                setImg(fileReader.result)
+                console.log(img)
+                img['name'] = fileReader.result;
+                console.log(img)
+
+                
+            }
+
+        })
+    }
+
+
+
     let handleSubmit = async (e) => {
+    
+        uploadImage(e);
         e.preventDefault();
+       
+       
+    
         try {
+            var imagemEnv = img.name;
             let res = await fetch("https://localhost:7136/CadastrandoReceita/cadastraReceita?name=" + name + "&porcoes=" + porcoes + "&tmpPreparo="
-                + tmpPreparo + "&categoria=" + categoria + "&ingredientes=" + ingredientes + "&modoPreparo=" , {
+                + tmpPreparo + "&categoria=" + categoria + "&ingredientes=" + ingredientes + "&modoPreparo=" + modoPreparo + "&img=" + imagemEnv , {
                 method: "POST",
                 headers: {
                     'Content-type': 'application/json',
@@ -110,17 +148,19 @@ export default function CadastroReceita() {
                         <option value="3">Doce</option>
                         <option value="4">Drinks</option>
                     </select>
-                    {/* <label>Imagem</label>
+
+                    
+                    <label>Imagem</label>
                     <input
                         class="form-control"
                         className={styles.img}
                         type="file"
-                        value={img}
+                       
                         placeholder="Imagem"
-                        onChange={(e) => setImg(e.target.files[0].item)}
+                        onChange={(e) => setImg(e.target.files)}
 
 
-                    /> */}
+                    />
 
 
                 </div>

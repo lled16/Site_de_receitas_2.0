@@ -14,7 +14,7 @@ namespace MoogReceitas.Controllers
     {
 
         [HttpPost("cadastraReceita")]
-        public string CadReceita(string name, int porcoes, int tmpPreparo, int categoria, string ingredientes, string modoPreparo, object img)
+        public string CadReceita(string name, int porcoes, int tmpPreparo, int categoria, string ingredientes, string modoPreparo, string img )
         {
 
             DataContext cadReceita = new();
