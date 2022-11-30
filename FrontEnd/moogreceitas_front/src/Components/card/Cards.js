@@ -5,14 +5,17 @@ import {BiDish} from 'react-icons/bi'
 // import { BsPencilSquare, BsFillTrashFill } from 'react-icons'
 // import { BsFillPencilFill, BsTrashFill } from "react-icons/bs";
 
-function Cards({ id, name, PORCOES, TMP_PREPARO }) {
+function Cards({ id, name, PORCOES, TMP_PREPARO, img }) {
 
 
 
     return (
-
+        
         <div className={styles.space}>
             <div className={styles.card}>
+                <div>
+                    <img src={img} alt="img" className={styles.imgReceita}/>
+                </div>
                 <div className={styles.linha}>
                     <h4>{name}</h4>
                 </div>
@@ -26,9 +29,8 @@ function Cards({ id, name, PORCOES, TMP_PREPARO }) {
                 </div>
 
             </div>
-
-
         </div >
+  
 
 
     )

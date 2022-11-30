@@ -2,6 +2,11 @@ import Header from '../Header/Header'
 import styles from './CadastroReceita.module.css'
 import Submit from '../form/SubmitButton'
 import { useState } from 'react'
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+import FileBase64 from 'react-file-base64';
+
 
 export default function CadastroReceita() {
 
@@ -9,68 +14,52 @@ export default function CadastroReceita() {
     const [name, setName] = useState("");
     const [porcoes, setPorcoes] = useState("");
     const [tmpPreparo, settmpPreparo] = useState("");
-    const [categoria, setCategoria] = useState("");
-    const [img, setImg] = useState("");
     const [ingredientes, setIngredientes] = useState("");
     const [modoPreparo, setmodoPreparo] = useState("");
     const [message, setMessage] = useState("");
+    const [categoria, setCategoria] = useState("");
+    const [img, setImg] = useState("");
 
 
- 
+    const convert2base64 = e => {
+        const file = e.target.files[0];
+        const reader = new FileReader();
 
+        reader.onloadend = () => {
+            setImg(reader.result.toString());
+        };
 
+        reader.readAsDataURL(file);
 
-    const uploadImage =  async (e) => {
-        const file = img[0]
-        const base64 = await convertToBase64(file)
-        setImg(base64)
-    };
-
-    const convertToBase64 = (file) => {
-        return new Promise((resolve, reject)=>{
-            const fileReader = new FileReader();
-            fileReader.readAsDataURL(file)
-
-
-            fileReader.onload = () =>{
-                resolve(fileReader.result);
-                
-                setImg(fileReader.result)
-                console.log(img)
-                img['name'] = fileReader.result;
-                console.log(img)
-
-                
-            }
-
-        })
+        console.log(img);
+        
     }
 
 
-
     let handleSubmit = async (e) => {
-    
-        uploadImage(e);
+
         e.preventDefault();
-       
-       
-    
+        setImg(img.toString());
+
+
         try {
-            var imagemEnv = img.name;
-            let res = await fetch("https://localhost:7136/CadastrandoReceita/cadastraReceita?name=" + name + "&porcoes=" + porcoes + "&tmpPreparo="
-                + tmpPreparo + "&categoria=" + categoria + "&ingredientes=" + ingredientes + "&modoPreparo=" + modoPreparo + "&img=" + imagemEnv , {
+            console.log(img)
+
+
+            let res = await fetch("https://localhost:7136/CadastrandoReceita/cadastraReceita/" , {
                 method: "POST",
                 headers: {
                     'Content-type': 'application/json',
-                }
-                // body: JSON.stringify({
-                //     name: name,
-                //     porcoes: porcoes,
-                //     tmpPreparo: tmpPreparo,
-                //     categoria: categoria,
-                //     ingredientes: ingredientes,
-                //     modoPreparo: modoPreparo
-                // }),
+                },
+                    body: JSON.stringify({
+                    NOME: name,
+                    PORCOES: porcoes,
+                    TMP_PREPARO: tmpPreparo,
+                    CATEGORIA: categoria,
+                    INGREDIENTES: ingredientes,
+                    MODO_PREPARO: modoPreparo,
+                    IMG: img
+                }),
             });
 
             if (res.status === 200) {
@@ -136,7 +125,7 @@ export default function CadastroReceita() {
                     />
 
 
-        
+
                     <label>Categoria</label>
                     <select name="categoria"
                         value={categoria}
@@ -149,19 +138,20 @@ export default function CadastroReceita() {
                         <option value="4">Drinks</option>
                     </select>
 
-                    
+
                     <label>Imagem</label>
                     <input
                         class="form-control"
                         className={styles.img}
                         type="file"
-                       
+
                         placeholder="Imagem"
-                        onChange={(e) => setImg(e.target.files)}
+                        onChange={e => convert2base64(e)}
 
 
                     />
 
+                
 
                 </div>
 

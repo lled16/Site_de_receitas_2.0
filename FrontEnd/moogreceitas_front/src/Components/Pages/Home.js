@@ -7,7 +7,7 @@ export default function Home() {
 
 
 
-    const [itensPerPage, setItensPerPage] = useState(9);
+    const [itensPerPage, setItensPerPage] = useState(10);
     const [currentPage, setCurrentPage] = useState(0);
     const [receitas, setReceitas] = useState([]);
     const pages = Math.ceil(receitas.length / itensPerPage);
@@ -65,6 +65,7 @@ export default function Home() {
                             name={receita.nome}
                             TMP_PREPARO={receita.tmP_PREPARO}
                             PORCOES={receita.porcoes}
+                            img={receita.img}
 
                         />
                     ))}

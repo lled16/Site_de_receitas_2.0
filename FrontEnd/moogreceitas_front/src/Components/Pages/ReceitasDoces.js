@@ -20,7 +20,7 @@ export default function ReceitasDoces() {
     useEffect(() => {
         setTimeout(
             () => {
-                fetch('https://localhost:7136/CadastrandoReceita/getReceitasTotal?codCategoria=' + 2, {
+                fetch('https://localhost:7136/CadastrandoReceita/getReceitasTotal?codCategoria=' + 3, {
                     method: 'GET',
                     headers: {
                         'Content-type': 'application/json'
@@ -65,7 +65,7 @@ export default function ReceitasDoces() {
                             name={receita.nome}
                             TMP_PREPARO={receita.tmP_PREPARO}
                             PORCOES={receita.porcoes}
-
+                            img={receita.img}
                         />
                     ))}
             </div>

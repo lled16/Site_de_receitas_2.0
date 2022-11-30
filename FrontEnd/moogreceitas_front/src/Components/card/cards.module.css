@@ -2,25 +2,28 @@
     display: flex;
     align-items: center;
     border: 2px solid rgba(133, 39, 117, 0.3);
-    width: 100%;
+    width: 80%;
     flex-direction: column;
     border-radius: 10px;
     -webkit-box-shadow: 0px 0px 15px -8px #4F1746; 
-box-shadow: 0px 0px 15px -8px #4F1746;
+    box-shadow: 0px 0px 15px -8px #4F1746;
 
 
+}
+.space {
+    padding: 5px;
+    width: 20%;
 }
 
 .cards {
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     margin: 0 auto;
     flex-wrap: wrap;
 
-
-
 }
+
 
 .titulo h1 {
     display: flex;
@@ -40,13 +43,14 @@ box-shadow: 0px 0px 15px -8px #4F1746;
     display: flex;
     justify-content: center;
 }
-
-
-
-.space {
-    padding: 5px;
-    width: 30%;
+.imgReceita{
+    width: 100%;
+    border-radius: 8px 8px 0px 0px;
 }
+
+
+
+
 
 .buttonPag {
     border-radius: 25px;
@@ -59,7 +63,7 @@ box-shadow: 0px 0px 15px -8px #4F1746;
 .divPag {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
     width: 100%;
 }
 

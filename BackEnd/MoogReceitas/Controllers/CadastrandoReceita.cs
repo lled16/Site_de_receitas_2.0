@@ -1,7 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Routing.Template;
 using Microsoft.EntityFrameworkCore;
 using MoogReceitas.DataBase;
 using MoogReceitas.Models;
+using Newtonsoft.Json.Linq;
 using System.Data;
 using System.Web.Http.Cors;
 
@@ -14,26 +16,20 @@ namespace MoogReceitas.Controllers
     {
 
         [HttpPost("cadastraReceita")]
-        public string CadReceita(string name, int porcoes, int tmpPreparo, int categoria, string ingredientes, string modoPreparo, string img )
+        public string CadReceita(CadastroReceita teste)
         {
+            Console.WriteLine(teste);
 
             DataContext cadReceita = new();
             Random randNum = new Random();
 
 
-            var receita = new CadastroReceita()
-            {
-                ID = randNum.Next(),
-                NOME = name,
-                PORCOES = porcoes,
-                TMP_PREPARO = tmpPreparo,
-                CATEGORIA = categoria,
-                INGREDIENTES = ingredientes,
-                MODO_PREPARO = modoPreparo,
-                IMG = img
-            };
+            //teste.ID = randNum.Next();
 
-            cadReceita.Receitas.Add(receita);
+
+
+
+            cadReceita.Receitas.Add(teste);
             cadReceita.SaveChanges();
 
             return "Receita cadastrada !";
