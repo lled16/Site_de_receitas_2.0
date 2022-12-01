@@ -56,7 +56,7 @@ export default function Home() {
 
 
 
-            <div className={styles.cards}>
+            <div className={styles.space}>
 
                 {receitas.length > 0 &&
                     currentItens.map((receita) => (

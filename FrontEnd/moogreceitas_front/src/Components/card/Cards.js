@@ -11,7 +11,7 @@ function Cards({ id, name, PORCOES, TMP_PREPARO, img }) {
 
     return (
         
-        <div className={styles.space}>
+      
             <div className={styles.card}>
                 <div>
                     <img src={img} alt="img" className={styles.imgReceita}/>
@@ -29,7 +29,8 @@ function Cards({ id, name, PORCOES, TMP_PREPARO, img }) {
                 </div>
 
             </div>
-        </div >
+         
+  
   
 
 

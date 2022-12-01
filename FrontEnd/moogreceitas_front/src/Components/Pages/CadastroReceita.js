@@ -3,10 +3,6 @@ import styles from './CadastroReceita.module.css'
 import Submit from '../form/SubmitButton'
 import { useState } from 'react'
 import React from 'react';
-import ReactDOM from 'react-dom';
-
-import FileBase64 from 'react-file-base64';
-
 
 export default function CadastroReceita() {
 

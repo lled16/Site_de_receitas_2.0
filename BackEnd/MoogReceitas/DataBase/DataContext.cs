@@ -13,11 +13,11 @@ namespace MoogReceitas.DataBase
         {
 
             // CONEXÃO NA CAPYS
-            optionsBuilder.UseSqlServer("server=DEV45;database=MOOG_RECEITAS;trusted_connection=true;Integrated Security=SSPI;TrustServerCertificate=True;");
+            //optionsBuilder.UseSqlServer("server=DEV45;database=MOOG_RECEITAS;trusted_connection=true;Integrated Security=SSPI;TrustServerCertificate=True;");
 
 
             //CONEXÃO DA MINHA CASA
-            //optionsBuilder.UseSqlServer("server=DESKTOP-278IVMV;database=MOOG_RECEITAS;trusted_connection=true;Integrated Security=SSPI;TrustServerCertificate=True;");
+            optionsBuilder.UseSqlServer("server=DESKTOP-278IVMV;database=MOOG_RECEITAS;trusted_connection=true;Integrated Security=SSPI;TrustServerCertificate=True;");
 
 
         }
