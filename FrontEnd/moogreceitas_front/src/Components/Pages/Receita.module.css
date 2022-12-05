@@ -1,0 +1,83 @@
+.receita{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+
+.leftInfo{
+    width: 30%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+   
+}
+.container{
+    width: 100%;
+}
+
+@media screen and (max-width: 700px) {
+    .receita {   
+      flex-direction: column;
+    }
+  }
+
+  @media screen and (min-width: 700px) {
+    .leftInfo {   
+        border-right: 5px solid #4F1746;
+    }
+  }
+
+
+.rightInfo{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 70%;
+    
+}
+
+.imgRec{
+    width: 80%;
+    border: 2px solid #4F1746
+}
+h1{
+ 
+    text-align: center;
+}
+
+
+.divRowButton{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding-top: 50px;
+}
+
+.buttonAcoesDeletar{
+    border: none;
+    border-radius: 5px;
+    width: 50%;  
+    background-color: #4F1746; 
+    color: white;
+    font-weight: bold;
+}
+
+.buttonAcoesEditar{
+    border: none;
+    border-radius: 5px;
+    width: 50%;
+    background-color: #4F1746;
+    color: white;
+    font-weight: bold;   
+}
+.divButton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}

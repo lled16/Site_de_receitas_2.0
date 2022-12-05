@@ -1,0 +1,30 @@
+.formLogin{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+.divCampo{
+    padding-top: 1.5em;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.divCampo label{
+    font-weight: bold;
+}
+
+.buttonLogar{
+    border: none;
+    border-radius: 5px;
+    width: 15%;
+    background-color: rgba(133, 39, 117, 0.8) ;
+    color: white;
+    font-weight: bold;
+}
+.inputLogin{
+    
+    border-radius: 5px;
+    border: 1px solid rgba(133, 39, 117, 0.8);
+}

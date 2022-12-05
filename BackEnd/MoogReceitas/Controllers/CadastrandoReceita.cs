@@ -5,6 +5,7 @@ using MoogReceitas.DataBase;
 using MoogReceitas.Models;
 using Newtonsoft.Json.Linq;
 using System.Data;
+using System.Data.SqlClient;
 using System.Web.Http.Cors;
 
 namespace MoogReceitas.Controllers
@@ -16,9 +17,9 @@ namespace MoogReceitas.Controllers
     {
 
         [HttpPost("cadastraReceita")]
-        public string CadReceita(CadastroReceita teste)
+        public string CadReceita(CadastroReceita cadNewReceita)
         {
-            Console.WriteLine(teste);
+            Console.WriteLine(cadNewReceita);
 
             DataContext cadReceita = new();
             Random randNum = new Random();
@@ -29,7 +30,7 @@ namespace MoogReceitas.Controllers
 
 
 
-            cadReceita.Receitas.Add(teste);
+            cadReceita.Receitas.Add(cadNewReceita);
             cadReceita.SaveChanges();
 
             return "Receita cadastrada !";
@@ -49,7 +50,7 @@ namespace MoogReceitas.Controllers
 
                     if (codCategoria != 0)
                     {
-                        if (c.CATEGORIA == codCategoria)
+                        if (c.categoria == codCategoria)
                         {
                             receitasCadastradas.Add(c);
                         }
@@ -66,6 +67,57 @@ namespace MoogReceitas.Controllers
                 return null;
             }
 
+        }
+
+
+        [HttpDelete("DeletaReceita")]
+        public string DeletaReceita( int id)
+        {
+            SqlConnection con = new SqlConnection("server=DESKTOP-278IVMV;database=MOOG_RECEITAS;trusted_connection=true;Integrated Security=SSPI;TrustServerCertificate=True;");
+
+            con.Open();
+
+            DataContext context = new DataContext();
+
+            SqlCommand comando = new SqlCommand("DELETE FROM receitas WHERE id =" + id, con);
+
+
+            comando.ExecuteNonQuery();
+            con.Close();
+
+
+            return "Receita cadastrada !";
+        }
+
+
+
+        [HttpPost("AtualizaReceita")]
+        public string AtualizaReceita(CadastroReceita newInfo)
+        {
+            SqlConnection con = new SqlConnection("server=DESKTOP-278IVMV;database=MOOG_RECEITAS;trusted_connection=true;Integrated Security=SSPI;TrustServerCertificate=True;");
+
+            int id = newInfo.ID;
+            string nome = newInfo.NOME;
+            int porcoes = newInfo.PORCOES;
+            int tmpPreparo = newInfo.TMP_PREPARO;
+            string ingredientes = newInfo.INGREDIENTES;
+            string modoPreparo = newInfo.MODO_PREPARO;
+
+
+
+            con.Open();
+
+            DataContext context = new DataContext();
+
+            SqlCommand comando = 
+            new SqlCommand("UPDATE receitas SET NOME = " + nome + ", PORCOES =" + porcoes +", TMP_PREPARO = " + tmpPreparo + ", INGREDIENTES = " + ingredientes + ", MODO_PREPARO = " + modoPreparo + " WHERE ID = " + id, con);
+
+
+            comando.ExecuteNonQuery();
+            con.Close();
+
+
+            return "Receita cadastrada !";
         }
 
 

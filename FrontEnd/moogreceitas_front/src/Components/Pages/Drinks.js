@@ -2,13 +2,12 @@ import Header from '../Header/Header'
 import { useState, useEffect } from "react"
 import Cards from '../card/Cards'
 import styles from '../card/cards.module.css'
-import Receita from './Receita';
 
-export default function Home() {
-
+export default function ReceitasDoces() {
 
 
-    const [itensPerPage, setItensPerPage] = useState(10);
+
+    const [itensPerPage, setItensPerPage] = useState(9);
     const [currentPage, setCurrentPage] = useState(0);
     const [receitas, setReceitas] = useState([]);
     const pages = Math.ceil(receitas.length / itensPerPage);
@@ -21,7 +20,7 @@ export default function Home() {
     useEffect(() => {
         setTimeout(
             () => {
-                fetch('https://localhost:7136/CadastrandoReceita/getReceitasTotal?codCategoria=' + 0 , {
+                fetch('https://localhost:7136/CadastrandoReceita/getReceitasTotal?codCategoria=' + 4, {
                     method: 'GET',
                     headers: {
                         'Content-type': 'application/json'
@@ -51,7 +50,7 @@ export default function Home() {
 
 
             <div className={styles.titulo}>
-                <h1> Receitas da MOOG </h1>
+                <h1> Drinks </h1>
             </div>
 
 
@@ -62,15 +61,11 @@ export default function Home() {
                 {receitas.length > 0 &&
                     currentItens.map((receita) => (
                         <Cards
-                            id={receita.id}
-                            name={receita.nome}
-                            tmp_preparo={receita.tmp_preparo}
-                            categoria = {receita.categoria} 
-                            ingredientes = {receita.ingredientes}
-                            modo_preparo = {receita.modo_preparo}
-                            porcoes = {receita.porcoes}
-                            img={receita.img}
 
+                            name={receita.nome}
+                            TMP_PREPARO={receita.tmP_PREPARO}
+                            PORCOES={receita.porcoes}
+                            img={receita.img}
                         />
                     ))}
             </div>

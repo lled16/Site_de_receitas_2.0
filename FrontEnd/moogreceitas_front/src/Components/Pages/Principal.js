@@ -13,7 +13,7 @@ export default function Principal() {
     return (
         <>
             <Header
-                naoExibePesquisa={false}
+                naoExibePesquisa={true}
             />
 
             <div className={styles.containerPrincipal}>

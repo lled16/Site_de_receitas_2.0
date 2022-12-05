@@ -4,8 +4,61 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 
 }
+@media screen and (max-width: 700px) {
+    .header {   
+      flex-direction: column;
+    }
+    .nameLog{
+        font-size: 15px;
+    }
+    .avatarDrop{
+        display: flex;
+        width: 100% !important;
+        padding-top: 10px;
+        justify-content: space-around !important;
+        align-items: center !important;
+    }
+    .nome{
+        width: 50% !important;
+    }
+    .pesquisa{
+        padding-top: 10px;
+    }
+    .inputSearch{
+        height: 30px !important;
+        width: 100% !important;
+        font-size: 15px;
+    }
+    .logoMoog{
+        width: 50px !important;
+    }
+  
+  }
+  .pesquisa{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+  }
+  .nome{
+    width: 20%;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .select{
+    width: 20%;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .avatarDrop{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 30%;
+  }
 
 .inputSearch {
     height: 2.5em;
@@ -38,9 +91,21 @@
     text-decoration: none;
     color: black;
 }
-
+.teste{
+    color: white !important;
+    font-weight: bold !important;
+}
 .itemDrop {
-    background-color: rgba(133, 39, 117, 0.3) !important;
+    background-color: rgba(133, 39, 117, 0.8) !important;
+    color: white;
+}
+.nameLog{
+    font-weight: bold;
+    
+}
+.avatar{
+    font-size: 30px;
+    color:#852775 ;
 }
 
 .itemDrop :hover {
