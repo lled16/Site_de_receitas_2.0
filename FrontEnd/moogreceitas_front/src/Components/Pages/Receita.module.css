@@ -61,7 +61,7 @@ h1{
 .buttonAcoesDeletar{
     border: none;
     border-radius: 5px;
-    width: 50%;  
+    width: 13%;  
     background-color: #4F1746; 
     color: white;
     font-weight: bold;
@@ -70,7 +70,7 @@ h1{
 .buttonAcoesEditar{
     border: none;
     border-radius: 5px;
-    width: 50%;
+    width: 100%;
     background-color: #4F1746;
     color: white;
     font-weight: bold;   
@@ -79,5 +79,5 @@ h1{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
+    width: 50%;
 }

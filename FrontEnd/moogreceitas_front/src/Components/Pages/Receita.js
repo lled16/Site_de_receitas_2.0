@@ -72,14 +72,14 @@ export default function Receita({ idReceita }) {
                             <div className={styles.divButton}>
                                 <button className={styles.buttonAcoesDeletar} onClick={deletaReceita}>Excluir</button>
                             </div>
+                            <div className={styles.divButton} >
+                                <Link to="/editaReceita"
+                                    state={{ from: { id, nome, porcoes, tmp_preparo, img, categoria, ingredientes, modo_preparo } }}>
 
-                            <Link to="/editaReceita" className={styles.link}
-                                state={{ from: { id, nome, porcoes, tmp_preparo, img, categoria, ingredientes, modo_preparo } }}>
-                                <div className={styles.divButton} >
                                     <button className={styles.buttonAcoesEditar}>Editar</button>
-                                </div>
-                            </Link>
 
+                                </Link>
+                            </div>
                         </div>
                     }
                 </div>

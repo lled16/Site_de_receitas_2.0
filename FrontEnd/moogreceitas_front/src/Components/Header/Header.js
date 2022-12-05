@@ -30,7 +30,9 @@ export default function Header({ naoExibePesquisa }) {
             <div className={styles.avatarDrop}>
                 <div className={styles.nome}>
                     {token &&
+                    <Link to="/perfil" className={styles.perfil}>
                         <label className={styles.nameLog}> <BiUserCircle className={styles.avatar} /> Olá, Milene !</label>
+                    </Link>
                     }
                 </div>
                 

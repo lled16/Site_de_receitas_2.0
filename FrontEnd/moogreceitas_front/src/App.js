@@ -11,6 +11,7 @@ import Login from './Components/Pages/Login';
 import StoreProvider  from './Components/Store/Provider';
 import Receita from './Components/Pages/Receita';
 import EditaReceita from './Components/Pages/EditaReceita';
+import Perfil from './Components/Pages/Perfil';
 
 
 
@@ -34,6 +35,7 @@ function App() {
           <Route path="cadastroreceitas" element={<CadastroReceita />} />
           <Route path="receita" element={<Receita />} />
           <Route path="editaReceita" element={<EditaReceita />} />
+          <Route path="perfil" element={<Perfil />} />
         </Routes>
       </StoreProvider>
       </BrowserRouter>

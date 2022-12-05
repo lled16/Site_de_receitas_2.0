@@ -1,6 +1,6 @@
 body {
   margin: 0 !important;
-  padding: 5em !important;
+  padding: 2em !important;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -8,10 +8,16 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-image: url('./imgs/fundo-cozinha.jpeg');
   background-repeat: no-repeat;
-  background-size:auto;
+  background-size:cover;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+@media screen and (min-width: 700px) {
+  .body {   
+    padding: 5em !important;
+  }
 }
