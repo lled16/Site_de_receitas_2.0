@@ -42,7 +42,8 @@
 
 .imgRec{
     width: 80%;
-    border: 2px solid #4F1746
+    border: 2px solid #4F1746;
+    border-radius: 10px;
 }
 h1{
  
@@ -61,7 +62,7 @@ h1{
 .buttonAcoesDeletar{
     border: none;
     border-radius: 5px;
-    width: 13%;  
+    width: 30%;  
     background-color: #4F1746; 
     color: white;
     font-weight: bold;
@@ -80,4 +81,14 @@ h1{
     align-items: center;
     justify-content: center;
     width: 50%;
+}
+.linkEditar{
+    width: 30%;
+}
+
+.textAreaModo{
+    width: 80%;
+    height: 250px;
+    resize: none;
+    
 }

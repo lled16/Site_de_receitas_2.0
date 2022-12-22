@@ -3,6 +3,8 @@ import styles from './CadastroReceita.module.css'
 import Submit from '../form/SubmitButton'
 import { useState } from 'react'
 import React from 'react';
+import { Navigate } from 'react-router-dom';
+import { useLocation } from 'react-router-dom'
 
 export default function CadastroReceita() {
 
@@ -60,7 +62,8 @@ export default function CadastroReceita() {
 
             if (res.status === 200) {
 
-                setMessage("Cadastrada !");
+                setMessage("Receita cadastrada, redirecionando para o início ...");
+                window.location.href = "/home";
             } else {
                 setMessage("Erro ao cadastrar !");
             }
@@ -180,7 +183,7 @@ export default function CadastroReceita() {
                     <Submit text="Cadastrar Receita" />
                 </div>
             </form>
-            <div className="message">{message ? <p>{message}</p> : null}</div>
+            <div className={styles.message}>{message ? <p className={styles.messageText}>{message}</p> : null}</div>
 
         </>
     )

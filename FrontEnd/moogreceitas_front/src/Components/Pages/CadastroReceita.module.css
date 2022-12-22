@@ -9,6 +9,17 @@
 
    
 }
+.message{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.messageText{
+    font-weight: bold;
+    color: white;
+    font-size: 20px;
+}
 
 @media screen and (max-width: 700px) {
     .form {   

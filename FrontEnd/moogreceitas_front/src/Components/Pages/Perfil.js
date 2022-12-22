@@ -8,7 +8,7 @@ export default function Perfil() {
         <div>
             <Header naoExibePesquisa={true} />
             <div className={styles.nome}>
-                <h1>Milene</h1>
+                <h1>Chef Milene</h1>
             </div>
 
             <div className={styles.container}>

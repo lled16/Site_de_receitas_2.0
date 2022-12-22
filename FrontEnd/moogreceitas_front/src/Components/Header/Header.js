@@ -11,6 +11,8 @@ import { BiUserCircle } from 'react-icons/bi'
 export default function Header({ naoExibePesquisa }) {
     const [token, setToken] = useStorage('token')
     return (
+
+  
         <div className={styles.header}>
 
             <div>
@@ -52,6 +54,9 @@ export default function Header({ naoExibePesquisa }) {
                             <Link to="/receitasdoces" className={styles.link}><CDropdownItem className={styles.teste}> Receitas doces</CDropdownItem></Link>
                             <Link to="/receitasSalgadas" className={styles.link}><CDropdownItem className={styles.teste}> Receitas Salgadas</CDropdownItem></Link>
                             <Link to="/drinks" className={styles.link}><CDropdownItem className={styles.teste}> Drinks </CDropdownItem></Link>
+                            {token &&
+                                <a onClick={deslogar} className={styles.link}> <CDropdownItem className={styles.teste}> Sair </CDropdownItem></a>
+                            }
 
                         </CDropdownMenu>
                     </CDropdown>
@@ -60,4 +65,9 @@ export default function Header({ naoExibePesquisa }) {
         </div>
 
     )
+    function deslogar(){
+        localStorage.clear();
+        window.location.href = "/";
+    }
+
 }

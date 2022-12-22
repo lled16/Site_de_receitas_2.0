@@ -62,8 +62,10 @@ export default function Receita({ idReceita }) {
                     </div>
 
                     <div className={styles.rightInfo}>
-                        <h4>INGREDIENTES</h4> <p>{ingredientes}</p>
-                        <h4>MODO DE PREPARO</h4> <p> {modo_preparo}</p>
+                        <h4>INGREDIENTES</h4>
+                        <textarea readOnly="true" className={styles.textAreaModo} value={ingredientes}> </textarea>
+                        <h4>MODO DE PREPARO</h4>
+                        <textarea readOnly className={styles.textAreaModo} value={modo_preparo}> </textarea>
                     </div>
                 </div>
                 <div>
@@ -73,7 +75,7 @@ export default function Receita({ idReceita }) {
                                 <button className={styles.buttonAcoesDeletar} onClick={deletaReceita}>Excluir</button>
                             </div>
                             <div className={styles.divButton} >
-                                <Link to="/editaReceita"
+                                <Link to="/editaReceita" className={styles.linkEditar}
                                     state={{ from: { id, nome, porcoes, tmp_preparo, img, categoria, ingredientes, modo_preparo } }}>
 
                                     <button className={styles.buttonAcoesEditar}>Editar</button>
