@@ -60,6 +60,11 @@
     color: #7b7b7b;
 }
 
+.img{
+    width: 70%;
+    background-color: white;
+}
+
 
 .textarea{
     width: 80%;

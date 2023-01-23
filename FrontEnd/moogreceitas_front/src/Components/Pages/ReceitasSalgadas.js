@@ -62,10 +62,14 @@ export default function ReceitasDoces() {
                     currentItens.map((receita) => (
                         <Cards
 
-                            name={receita.nome}
-                            TMP_PREPARO={receita.tmP_PREPARO}
-                            PORCOES={receita.porcoes}
-                            img={receita.img}
+                        id={receita.id}
+                        name={receita.nome}
+                        tmp_preparo={receita.tmp_preparo}
+                        categoria = {receita.categoria} 
+                        ingredientes = {receita.ingredientes}
+                        modo_preparo = {receita.modo_preparo}
+                        porcoes = {receita.porcoes}
+                        img={receita.img}
                         />
                     ))}
             </div>
