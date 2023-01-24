@@ -23,7 +23,6 @@ export default function CadastroReceita() {
     var img_old = from.img;
     console.log({from});
     
-
     const [name, setName] = useState("");
     const [porcoes, setPorcoes] = useState("");
     const [tmpPreparo, settmpPreparo] = useState("");
@@ -32,7 +31,6 @@ export default function CadastroReceita() {
     const [message, setMessage] = useState("");
     const [categoria, setCategoria] = useState("");
     const [img, setImg] = useState("");
-
 
     const convert2base64 = e => {
         const file = e.target.files[0];
