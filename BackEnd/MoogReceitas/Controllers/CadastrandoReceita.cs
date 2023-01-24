@@ -73,7 +73,7 @@ namespace MoogReceitas.Controllers
         [HttpDelete("DeletaReceita")]
         public string DeletaReceita( int id)
         {
-            SqlConnection con = new SqlConnection("server=DESKTOP-278IVMV;database=MOOG_RECEITAS;trusted_connection=true;Integrated Security=SSPI;TrustServerCertificate=True;");
+            SqlConnection con = new SqlConnection("server=DESKTOP-DB1EK8N;database=MOOG_RECEITAS;trusted_connection=true;Integrated Security=SSPI;TrustServerCertificate=True;");
 
             con.Open();
 
@@ -94,7 +94,7 @@ namespace MoogReceitas.Controllers
         [HttpPost("AtualizaReceita")]
         public string AtualizaReceita(CadastroReceita newInfo)
         {
-            SqlConnection con = new SqlConnection("server=DESKTOP-278IVMV;database=MOOG_RECEITAS;trusted_connection=true;Integrated Security=SSPI;TrustServerCertificate=True;");
+            SqlConnection con = new SqlConnection("server=DESKTOP-DB1EK8N;database=MOOG_RECEITAS;trusted_connection=true;Integrated Security=SSPI;TrustServerCertificate=True;");
 
             int id = newInfo.ID;
             string nome = newInfo.NOME;

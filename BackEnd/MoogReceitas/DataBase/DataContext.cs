@@ -11,8 +11,12 @@ namespace MoogReceitas.DataBase
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-
+            //Casa
             optionsBuilder.UseSqlServer("server=DESKTOP-278IVMV;database=MOOG_RECEITAS;trusted_connection=true;Integrated Security=SSPI;TrustServerCertificate=True;");
+
+
+            //Brunsker
+            optionsBuilder.UseSqlServer("server=DESKTOP-DB1EK8N;database=MOOG_RECEITAS;trusted_connection=true;Integrated Security=SSPI;TrustServerCertificate=True;");
 
 
         }

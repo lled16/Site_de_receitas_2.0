@@ -22,6 +22,8 @@ export default function CadastroReceita() {
     var modo_preparo_old = from.modo_preparo;
     var img_old = from.img;
     console.log({from});
+    
+   
 
     
     const [name, setName] = useState("");
@@ -47,8 +49,7 @@ export default function CadastroReceita() {
         console.log(img);
         
     }
-
-
+    
     let handleSubmit = async (e) => {
 
         e.preventDefault();
@@ -96,7 +97,7 @@ export default function CadastroReceita() {
                 naoExibePesquisa={true}
             />
 
-
+            
             <form onSubmit={handleSubmit} className={styles.form}>
 
                 <div className={styles.secao}>

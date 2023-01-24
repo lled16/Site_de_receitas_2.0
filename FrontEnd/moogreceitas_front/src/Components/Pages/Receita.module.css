@@ -88,7 +88,18 @@ h1{
 
 .textAreaModo{
     width: 80%;
-    height: 250px;
+    height: 100%;
     resize: none;
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
     
+}
+
+.tituloReceita{
+    text-decoration: underline;
+    padding-bottom: 20px;
+}
+.tmpPreparo{
+    text-align: center;
 }

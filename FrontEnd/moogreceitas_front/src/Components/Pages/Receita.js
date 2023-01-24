@@ -49,7 +49,7 @@ export default function Receita({ idReceita }) {
             <Header naoExibePesquisa={true} />
 
             <div className={styles.container}>
-                <h1>{nome}</h1>
+                <h1 className={styles.tituloReceita}>{nome}</h1>
 
                 <div className={styles.receita}>
 
@@ -57,7 +57,7 @@ export default function Receita({ idReceita }) {
                     <div className={styles.leftInfo}>
                         <img src={img} className={styles.imgRec} />
                         <h4>Porções</h4><p> {porcoes}</p>
-                        <h4> Tempo de Preparo </h4><p> {tmp_preparo}</p>
+                        <h4 className={styles.tmpPreparo}> Tempo de Preparo </h4><p> {tmp_preparo}</p>
                         <h4>Categoria</h4> <p>{categoria}</p>
                     </div>
 
