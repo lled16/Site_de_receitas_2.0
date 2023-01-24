@@ -23,9 +23,7 @@ export default function CadastroReceita() {
     var img_old = from.img;
     console.log({from});
     
-   
 
-    
     const [name, setName] = useState("");
     const [porcoes, setPorcoes] = useState("");
     const [tmpPreparo, settmpPreparo] = useState("");
